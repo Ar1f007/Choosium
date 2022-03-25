@@ -10,7 +10,14 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
-  return <div>App</div>;
+  return (
+    <>
+      <header>
+        <h1>Choosium</h1>
+        <p>😍 Pick your dream front line 😍</p>
+      </header>
+    </>
+  );
 }
 
 export default App;
