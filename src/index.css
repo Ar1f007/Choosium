@@ -95,6 +95,13 @@ main {
 /* Responsive media query for mobile device */
 
 @media screen and (max-width: 580px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .subtitle {
+    font-size: 2rem;
+  }
+
   main {
     grid-template-columns: 1fr;
   }
