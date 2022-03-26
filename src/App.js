@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 function App() {
   const [selectedPlayer, setSelectedPlayer] = useState([]);
 
+  // Adds player to the selected player list
   const onClickAddToList = (newPlayer) => {
     if (selectedPlayer.length > 2) {
       alert('Can not pick more than 3 players');
@@ -21,17 +22,21 @@ function App() {
     setSelectedPlayer(newList);
   };
 
-  const onChooseAgainClick = () => {
+  // Clears the selected player array
+  const onChooseAgainButtonClick = () => {
     setSelectedPlayer([]);
   };
 
-  const onRandomSelectClick = () => {
+  // Randomly selects a player from selected players list
+  const onChooseOneForMeButtonClick = () => {
+    if (selectedPlayer.length === 0) return;
     const randomIndexValue = Math.floor(Math.random() * selectedPlayer.length);
     const randomPlayer = selectedPlayer[randomIndexValue];
     setSelectedPlayer([randomPlayer]);
   };
 
-  const onClickRemoveIcon = (removePlayer) => {
+  // Filter out players on clicking remove/x icon
+  const onRemoveIconClick = (removePlayer) => {
     const filterPlayer = selectedPlayer.filter((player) => player.id !== removePlayer.id);
 
     setSelectedPlayer(filterPlayer);
@@ -47,9 +52,9 @@ function App() {
         <Cards handleSelect={onClickAddToList} />
         <Sidebar
           playersList={selectedPlayer}
-          handleChooseAgain={onChooseAgainClick}
-          chooseOnePlayerRandomly={onRandomSelectClick}
-          handleRemove={onClickRemoveIcon}
+          handleChooseAgain={onChooseAgainButtonClick}
+          chooseOnePlayerRandomly={onChooseOneForMeButtonClick}
+          handleRemove={onRemoveIconClick}
         />
 
         <Questions />

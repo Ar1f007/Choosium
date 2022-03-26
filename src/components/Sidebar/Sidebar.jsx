@@ -4,6 +4,7 @@ import { GiCardPickup } from 'react-icons/gi';
 import { AiOutlineUndo } from 'react-icons/ai';
 import { RiDeleteBack2Line } from 'react-icons/ri';
 
+// Shows selected player on the sidebar
 const Sidebar = ({ playersList, handleChooseAgain, chooseOnePlayerRandomly, handleRemove }) => {
   return (
     <div className="sidebar">
