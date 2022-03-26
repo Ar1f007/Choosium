@@ -8,6 +8,10 @@ function App() {
   const [selectedPlayer, setSelectedPlayer] = useState([]);
 
   const onClickAddToList = (newPlayer) => {
+    if (selectedPlayer.length > 2) {
+      alert('Can not pick more than 3 players');
+      return;
+    }
     // check if the current selected player
     // already exists in the selected players list
     const alreadyExists = selectedPlayer.find((player) => player.id === newPlayer.id);
