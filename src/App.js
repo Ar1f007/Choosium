@@ -27,6 +27,12 @@ function App() {
     setSelectedPlayer([randomPlayer]);
   };
 
+  const onClickRemoveIcon = (removePlayer) => {
+    const filterPlayer = selectedPlayer.filter((player) => player.id !== removePlayer.id);
+
+    setSelectedPlayer(filterPlayer);
+  };
+
   return (
     <>
       <header>
@@ -39,6 +45,7 @@ function App() {
           playersList={selectedPlayer}
           handleChooseAgain={onChooseAgainClick}
           chooseOnePlayerRandomly={onRandomSelectClick}
+          handleRemove={onClickRemoveIcon}
         />
 
         <Questions />

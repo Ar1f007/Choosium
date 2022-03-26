@@ -2,8 +2,9 @@ import './sidebar.css';
 
 import { GiCardPickup } from 'react-icons/gi';
 import { AiOutlineUndo } from 'react-icons/ai';
+import { RiDeleteBack2Line } from 'react-icons/ri';
 
-const Sidebar = ({ playersList, handleChooseAgain, chooseOnePlayerRandomly }) => {
+const Sidebar = ({ playersList, handleChooseAgain, chooseOnePlayerRandomly, handleRemove }) => {
   return (
     <div className="sidebar">
       <h2>Your Selection</h2>
@@ -11,7 +12,12 @@ const Sidebar = ({ playersList, handleChooseAgain, chooseOnePlayerRandomly }) =>
         {playersList.map((player) => (
           <div className="player" key={player.id}>
             <img src={player.image} alt={player.name} />
-            <h3>{player.name}</h3>
+            <h3>
+              {player.name}
+              <span onClick={() => handleRemove(player)}>
+                <RiDeleteBack2Line />
+              </span>
+            </h3>
           </div>
         ))}
       </div>
