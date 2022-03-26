@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Cards from './components/Cards-container/CardsContainer';
+import Questions from './components/Questions/Questions';
 import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
           handleChooseAgain={onChooseAgainClick}
           chooseOnePlayerRandomly={onRandomSelectClick}
         />
+
+        <Questions />
       </main>
     </>
   );
