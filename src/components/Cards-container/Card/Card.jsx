@@ -1,7 +1,9 @@
+import { MdOutlinePlaylistAdd } from 'react-icons/md';
+
 import './card.css';
 
 const Player = ({ playerInfo, handleSelect }) => {
-  const { id, name, image, country, marketValue } = playerInfo;
+  const { name, image, country, marketValue } = playerInfo;
 
   return (
     <div className="card">
@@ -16,7 +18,7 @@ const Player = ({ playerInfo, handleSelect }) => {
           <small>Market Value:</small> €{marketValue}
         </p>
         <button className="btn-add btn" onClick={() => handleSelect(playerInfo)}>
-          Add to list
+          Add to list <MdOutlinePlaylistAdd className="icon" />
         </button>
       </div>
     </div>

@@ -1,5 +1,8 @@
 import './sidebar.css';
 
+import { GiCardPickup } from 'react-icons/gi';
+import { AiOutlineUndo } from 'react-icons/ai';
+
 const Sidebar = ({ playersList, handleChooseAgain, chooseOnePlayerRandomly }) => {
   return (
     <div className="sidebar">
@@ -13,11 +16,11 @@ const Sidebar = ({ playersList, handleChooseAgain, chooseOnePlayerRandomly }) =>
         ))}
       </div>
       <div className="actions">
-        <button className="btn btn-block" onClick={handleChooseAgain}>
-          Choose Again
+        <button className="btn btn-block choose-again-btn" onClick={handleChooseAgain}>
+          Choose Again <AiOutlineUndo className="icon" />
         </button>
-        <button className="btn btn-block" onClick={chooseOnePlayerRandomly}>
-          Choose 1 for me
+        <button className="btn btn-block choose-one-btn" onClick={chooseOnePlayerRandomly}>
+          Choose 1 for me <GiCardPickup className="icon" />
         </button>
       </div>
     </div>

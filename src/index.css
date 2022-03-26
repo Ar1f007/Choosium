@@ -68,6 +68,11 @@ main {
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+
   transition: var(--transition);
 }
 
@@ -78,6 +83,11 @@ main {
 
 .btn-block {
   width: 100%;
+}
+
+.icon {
+  font-size: 1.8rem;
+  margin-left: 0.7rem;
 }
 
 @media screen and (max-width: 580px) {
