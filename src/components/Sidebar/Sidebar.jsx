@@ -1,6 +1,6 @@
 import './sidebar.css';
 
-const Sidebar = ({ playersList }) => {
+const Sidebar = ({ playersList, handleChooseAgain }) => {
   return (
     <div className="sidebar">
       <h2>Your Selection</h2>
@@ -13,8 +13,10 @@ const Sidebar = ({ playersList }) => {
         ))}
       </div>
       <div className="actions">
-        <button className="btn choose-again-btn btn-block">Choose Again</button>
-        <button className="btn select-randomly-btn btn-block">Random Select</button>
+        <button className="btn btn-block" onClick={handleChooseAgain}>
+          Choose Again
+        </button>
+        <button className="btn btn-block">Random Select</button>
       </div>
     </div>
   );
