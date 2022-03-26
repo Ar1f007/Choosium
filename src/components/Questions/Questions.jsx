@@ -5,9 +5,10 @@ const Questions = () => {
       <div className="question">
         <h3>Q. How does React Work?</h3>
         <p>
-          Ans: React is a library focusing on UI, consist of several component which are built on
-          using JSX(JavaScript XML), it is HTML like but not HTML. React renders those components
-          and creates a virtual DOM.
+          Ans: React is a library focusing on UI, uses declarative approach for writing code. We
+          write code by partitioning different part of the app into separate components which are
+          built on using JSX(JavaScript XML), it is HTML like but not HTML. React renders those
+          components and creates a virtual DOM.
           <br />
           Whenever a state in the app gets changed react compares the new DOM with the previous DOM
           and updates only the necessary part of the site. <br />
