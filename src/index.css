@@ -2,7 +2,14 @@
   --bg-color: #f8f5f2;
   --text-color: #222525;
   --white: #fffffe;
-  --primary: #078080;
+  --primary-100: #ddeae5;
+  --primary-200: #d2e4dd;
+  --primary-400: #09a0a0;
+  --primary-500: #078080;
+  --primary-700: #056060;
+
+  --border-radius: 3px;
+  --transition: all 0.2s ease-in-out;
 }
 * {
   margin: 0;
@@ -15,7 +22,7 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: #f3f4f6;
+  background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
@@ -43,7 +50,32 @@ main {
   max-width: 1400px;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1.1fr;
+  gap: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  padding: 0.8rem 1.2rem;
+  margin-top: 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-500);
+  color: #fff;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--primary-700);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.btn-block {
+  width: 100%;
 }
 
 @media screen and (max-width: 580px) {

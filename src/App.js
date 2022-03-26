@@ -10,7 +10,7 @@ function App() {
       </header>
       <main>
         <Cards />
-        {/* <Sidebar /> */}
+        <Sidebar />
       </main>
     </>
   );
