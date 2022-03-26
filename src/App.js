@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import Cards from './components/Cards-container/CardsContainer';
 import Sidebar from './components/Sidebar/Sidebar';
 
@@ -19,6 +20,12 @@ function App() {
     setSelectedPlayer([]);
   };
 
+  const onRandomSelectClick = () => {
+    const randomIndexValue = Math.floor(Math.random() * selectedPlayer.length);
+    const randomPlayer = selectedPlayer[randomIndexValue];
+    setSelectedPlayer([randomPlayer]);
+  };
+
   return (
     <>
       <header>
@@ -27,7 +34,11 @@ function App() {
       </header>
       <main>
         <Cards handleSelect={onClickAddToList} />
-        <Sidebar playersList={selectedPlayer} handleChooseAgain={onChooseAgainClick} />
+        <Sidebar
+          playersList={selectedPlayer}
+          handleChooseAgain={onChooseAgainClick}
+          chooseOnePlayerRandomly={onRandomSelectClick}
+        />
       </main>
     </>
   );
