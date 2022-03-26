@@ -1,21 +1,17 @@
-import { useEffect, useState } from 'react';
+import Cards from './components/Cards/Cards';
+import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
-  const [players, setPlayers] = useState([]);
-
-  useEffect(() => {
-    fetch('mock-data.json')
-      .then((res) => res.json())
-      .then((data) => setPlayers(data))
-      .catch((err) => console.log(err));
-  }, []);
-
   return (
     <>
       <header>
         <h1>Choosium</h1>
-        <p>😍 Pick your dream front line 😍</p>
+        <p className="subtitle">😍 Pick your dream front line 😍</p>
       </header>
+      <main>
+        <Cards />
+        {/* <Sidebar /> */}
+      </main>
     </>
   );
 }
